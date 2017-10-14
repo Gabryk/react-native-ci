@@ -22,7 +22,7 @@ jobs:
     steps:
       - checkout
 
-      - run: yarn install -g code-push-cli
+      - run: yarn install global code-push-cli
 
       # Download and cache dependencies
       - restore_cache:
