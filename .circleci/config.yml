@@ -5,7 +5,7 @@
 version: 2
 dependencies:
   pre:
-    - yarn install -g code-push-cli
+    -if [ ! -e ~/nvm/v0.10.33/bin/code-push-cli ]; then npm install -g code-push-cli; else echo "code-push-cli seems to be cached"; fi;
 jobs:
   build:
     docker:
