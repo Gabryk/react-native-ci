@@ -3,9 +3,6 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
-dependencies:
-  pre:
-    -if [ ! -e ~/nvm/v0.10.33/bin/code-push-cli ]; then npm install -g code-push-cli; else echo "code-push-cli seems to be cached"; fi;
 jobs:
   build:
     docker:
@@ -21,8 +18,6 @@ jobs:
 
     steps:
       - checkout
-
-      - run: yarn add global code-push-cli
 
       # Download and cache dependencies
       - restore_cache:
@@ -41,4 +36,4 @@ jobs:
       # run tests!
       - run: yarn test
 
-      - run: code-push release-react  react-native-ci android
+      - run: node node_modules/code-push-cli/script/cli release-react  react-native-ci android
