@@ -28,8 +28,10 @@ export default class App extends Component<{}> {
           optionalIgnoreButtonLabel: "Later",
           optionalInstallButtonLabel: "Yes",
         };
-
-    codePush.sync({ updateDialog: updateDialogOptions});
+    codePush.sync({
+      updateDialog: updateDialogOptions,
+      installMode: codePush.InstallMode.IMMEDIATE
+    })
   }
   render() {
     return (

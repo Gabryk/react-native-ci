@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "code-push-login": "node node_modules/code-push-cli/script/cli.js --accessKey $CI_AK",
+    "code-push-release": "node node_modules/code-push-cli/script/cli.js release-react  react-native-ci android"
   },
   "dependencies": {
     "code-push-cli": "^2.1.0-beta",
