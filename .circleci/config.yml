@@ -35,6 +35,7 @@ jobs:
         
       # run tests!
       - run: yarn test
+      
   codePush:
     docker:
       # specify the version you desire here
@@ -44,10 +45,6 @@ jobs:
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
-
-    branches:
-      only:
-        - master
 
     working_directory: ~/repo
 
@@ -61,7 +58,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
+      - run: npm install
 
       - save_cache:
           paths:
@@ -69,7 +66,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: yarn test
+      - run: npm test
 
       - run: npm run code-push-login
       
