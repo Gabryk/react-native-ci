@@ -1,4 +1,4 @@
 <resources>
-    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">cMJgNDapy6A0sUMWb6AjT7bqros5a0b249b8-8d78-4697-b38e-21fcada3ebb</string>
-    <string name="app_name">reactNativeDeployFlow</string>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">kgz6RxuyfTXP6T-4aD9tJPG5M6bta0b249b8-8d78-4697-b38e-21fcada3ebbe</string>
+    <string name="app_name">react-native-ci</string>
 </resources>

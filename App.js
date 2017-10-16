@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import codePush from "react-native-code-push";
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -20,11 +21,21 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component<{}> {
+  componentDidMount(){
+    var updateDialogOptions = {
+          updateTitle: "Update",
+          optionalUpdateMessage: "New version of the app is available. Install?",
+          optionalIgnoreButtonLabel: "Later",
+          optionalInstallButtonLabel: "Yes",
+        };
+
+    codePush.sync({ updateDialog: updateDialogOptions});
+  }
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to CI v0.0.2!
         </Text>
         <Text style={styles.instructions}>
           To get started, edit App.js
