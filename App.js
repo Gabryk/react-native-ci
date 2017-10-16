@@ -35,10 +35,10 @@ export default class App extends Component<{}> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to CI v0.0.3!
+          Welcome to CI v0.0.4!
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit App.js
+          Now CI with github
         </Text>
         <Text style={styles.instructions}>
           {instructions}
