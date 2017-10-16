@@ -36,4 +36,6 @@ jobs:
       # run tests!
       - run: yarn test
 
-      - run: node node_modules/code-push-cli/script/cli release-react  react-native-ci android
+      - run: node node_modules/code-push-cli/script/cli login --accessKey $CI_AK
+
+      - run: node node_modules/code-push-cli/script/cli release-react react-native-ci android
