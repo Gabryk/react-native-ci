@@ -80,3 +80,8 @@ workflows:
       - codePush:
           requires:
              - build
+          filter:
+            tags:
+              only: /*.js/
+            branches:
+              only: release/code-push
