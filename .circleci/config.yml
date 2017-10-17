@@ -71,7 +71,6 @@ jobs:
       - run: npm run code-push-login
       
       - run: npm run code-push-release
-
 workflows:
   version: 2
   build-and-codepush:
@@ -79,7 +78,7 @@ workflows:
       - build
       - codePush:
           requires:
-             - build
+            - build
           filter:
             tags:
               only: /*.js/
