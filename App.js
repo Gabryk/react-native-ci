@@ -40,7 +40,7 @@ export default class App extends Component<{}> {
           Welcome to CI v0.0.4!
         </Text>
         <Text style={styles.instructions}>
-          Now CI with github
+          Now CI WorkFlow, release/code-push
         </Text>
         <Text style={styles.instructions}>
           {instructions}
